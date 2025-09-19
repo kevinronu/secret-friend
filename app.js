@@ -1,4 +1,12 @@
-let friends = [];
+let friendNames = [];
+
+function addFriendNameToList(friendName) {
+  const li = document.createElement("li");
+  li.textContent = friendName;
+
+  const unorderedList = document.querySelector(".name-list");
+  unorderedList.appendChild(li);
+}
 
 function addFriend() {
   const input = document.querySelector(".input-name");
@@ -11,6 +19,9 @@ function addFriend() {
     return;
   }
 
-  friends.push(newFriendName);
+  friendNames.push(newFriendName);
+
+  addFriendNameToList(newFriendName);
+
   input.value = "";
 }
