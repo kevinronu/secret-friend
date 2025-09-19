@@ -12,4 +12,5 @@ function addFriend() {
   }
 
   friends.push(newFriendName);
+  input.value = "";
 }
